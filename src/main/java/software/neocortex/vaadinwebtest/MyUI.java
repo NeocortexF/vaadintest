@@ -11,7 +11,6 @@ import com.vaadin.ui.Label;
 import com.vaadin.ui.TextField;
 import com.vaadin.ui.UI;
 import com.vaadin.ui.VerticalLayout;
-import com.vaadin.addon.charts.Chart;
 
 /**
  * This UI is the application entry point. A UI may either represent a browser window 
@@ -40,11 +39,9 @@ public class MyUI extends UI {
         
         setContent(layout);
     }
-    
-    Chart myChart = new Chart();
-
+      
     @WebServlet(urlPatterns = "/*", name = "MyUIServlet", asyncSupported = true)
     @VaadinServletConfiguration(ui = MyUI.class, productionMode = false)
     public static class MyUIServlet extends VaadinServlet {
-    }
+    } 
 }
